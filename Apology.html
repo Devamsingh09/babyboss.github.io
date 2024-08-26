@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology Message</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #87CEEB; /* Sky blue background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .tv-container {
+            position: relative;
+            width: 700px;
+            height: 500px;
+        }
+        .tv-frame {
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .tv-frame::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 30px;
+            background-color: #333;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .tv-frame::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 15px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+        .tv-antenna {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+        .tv-antenna::before, .tv-antenna::after {
+            content: '';
+            width: 5px;
+            height: 60px;
+            background-color: #333;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            position: absolute;
+        }
+        .tv-antenna::before {
+            left: -10px;
+        }
+        .tv-antenna::after {
+            right: -10px;
+        }
+        .tv-screen {
+            width: 100%;
+            height: 100%;
+            background-color: #0000FF; /* Blue screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 15px solid #333;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        .tv-screen img {
+            width: 100%;
+            height: auto;
+            border-radius: 25px;
+            object-fit: cover;
+        }
+        .breaking-news {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: scroll 10s linear infinite;
+            text-align: center;
+            z-index: 5;
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        .content {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            font-size: 18px;
+            text-align: left;
+            width: calc(100% - 20px);
+            box-sizing: border-box;
+            border-radius: 10px;
+            z-index: 5;
+        }
+        .tv-buttons {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .tv-buttons div {
+            width: 20px;
+            height: 20px;
+            background-color: #666;
+            border-radius: 50%;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        }
+        .emoji-rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .emoji-rain span {
+            position: absolute;
+            font-size: 24px;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(100%);
+            }
+        }
+        .hand-emoji {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 60px;
+            animation: move 4s linear infinite;
+        }
+        @keyframes move {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="tv-container">
+        <div class="tv-frame">
+            <div class="tv-antenna"></div>
+            <div class="tv-screen">
+                <img src="image.jpg" alt="Your Photo">
+                <div class="breaking-news">YOU ARE THE MOST BEAUTIFUL GIRL RASHMI DEVAM SINGH❤️</div>
+                <div class="content">
+                    <p>I'm sorry baccha, mera phone band ho gaya tha isliye hum call nahi kar paye sham ko.</p>
+                    <p>Please maaf krdo❤️❤️❤️❤️❤️😗😗.</p>
+                </div>
+            </div>
+            <div class="tv-buttons">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="emoji-rain">
+            <!-- Add emoji elements here -->
+            <span style="left: 10%; animation-delay: 0s;">😊</span>
+            <span style="left: 20%; animation-delay: 1s;">💖</span>
+            <span style="left: 30%; animation-delay: 2s;">🌟</span>
+            <span style="left: 40%; animation-delay: 3s;">🌈</span>
+            <span style="left: 50%; animation-delay: 4s;">🥰</span>
+            <span style="left: 60%; animation-delay: 5s;">🌺</span>
+            <span style="left: 70%; animation-delay: 6s;">💫</span>
+            <span style="left: 80%; animation-delay: 7s;">🎉</span>
+            <span style="left: 90%; animation-delay: 8s;">🌼</span>
+        </div>
+        <div class="hand-emoji">🙏</div>
+    </div>
+</body>
+</html>
